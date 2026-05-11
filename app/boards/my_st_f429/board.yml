@@ -1,6 +1,0 @@
-board:
-  name: my_st_f429
-  full_name: My ST Nucleo F429
-  vendor: iomico
-  socs:
-    - name: stm32f429xx
