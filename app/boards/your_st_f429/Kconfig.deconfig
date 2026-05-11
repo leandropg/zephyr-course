@@ -1,0 +1,2 @@
+config BOARD_YOUR_ST_F429
+    select BOARD_EARLY_INIT_HOOK
