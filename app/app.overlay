@@ -2,6 +2,7 @@
     aliases {
         
         app-led = &green_led_1;
+        sensor-led = &blue_led_1;
     };
 
     onboard_led0: onboard_led {
