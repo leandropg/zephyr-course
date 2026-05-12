@@ -1,0 +1,3 @@
+config ONBOARD_LED_DRIVER
+    bool "Onboard Led driver"
+    default y

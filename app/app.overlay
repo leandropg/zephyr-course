@@ -3,4 +3,9 @@
         
         app-led = &green_led_1;
     };
+
+    onboard_led0: onboard_led {
+        compatible = "onboard_led,driver";
+        status = "okay";
+    };
 };
