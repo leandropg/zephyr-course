@@ -5,7 +5,12 @@
         sensor-led = &blue_led_1;
     };
 
-    onboard_led0: onboard_led {
+    onboard_led0: onboard_led_blue {
+        compatible = "onboard_led,driver";
+        status = "okay";
+    };
+
+    onboard_led1: onboard_led_red {
         compatible = "onboard_led,driver";
         status = "okay";
     };

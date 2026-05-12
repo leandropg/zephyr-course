@@ -1,7 +1,11 @@
+// Zephyr Includes
 #include <zephyr/drivers/gpio.h>
 #include <zephyr/drivers/sensor.h>
 #include <zephyr/kernel.h>
 #include <zephyr/logging/log.h>
+
+// Sensor Include
+#include "../drivers/onboard_led/onboard_led_driver.h"
 
 /**
  * @brief App Led
@@ -46,6 +50,9 @@ int main(void)
     if (!gpio_is_ready_dt(&app_led)) return -ENODEV;
 
     if (!device_is_ready(onboard_led_dev)) return -ENODEV;
+
+    // Set Blink Counter Value
+    onboard_led_set_blink_counter(onboard_led_dev, 100);
 
     if (gpio_pin_configure_dt(&app_led, GPIO_OUTPUT_INACTIVE) < 0) return 0;
 
