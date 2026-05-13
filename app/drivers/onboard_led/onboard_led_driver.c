@@ -40,6 +40,9 @@ static int sample_fetch_onboard_led(const struct device *dev, enum sensor_channe
     // Obtain Onboard Led Driver data
     struct onboard_led_driver_data *data = dev->data;
     LOG_INF("Blink Counter = %d", data->blinks_count);
+
+    // Increment Counter
+    data->blinks_count += 1;
     
     // Turn On Led
     gpio_pin_set_dt(&sensor_led, 1);
