@@ -30,7 +30,7 @@ static int cmd_sensor_read(const struct shell *sh, size_t argc, char **argv) {
 
     struct sensor_value val;
     sensor_channel_get(onboard_led_dev, SENSOR_CHAN_AMBIENT_TEMP, &val);
-    shell_fprintf(sh, SHELL_INFO, "Sensor Channel Get. Temperature: %d", val.val1);
+    shell_fprintf(sh, SHELL_INFO, "Sensor Channel Get. Temperature: %d\n", val.val1);
     return 0;
 }
 
@@ -42,7 +42,7 @@ static int cmd_sensor_read(const struct shell *sh, size_t argc, char **argv) {
  */
 static int cmd_sensor_info(const struct shell *sh, size_t argc, char **argv) {
 
-    shell_fprintf(sh, SHELL_INFO, "Device Name: %s | Ready State: %s\n", "NAME", "STATE");
+    shell_fprintf(sh, SHELL_INFO, "Device Name: %s | Ready State: %d\n", onboard_led_dev->name, device_is_ready(onboard_led_dev));
     return 0;
 }
 
