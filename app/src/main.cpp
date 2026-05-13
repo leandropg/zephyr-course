@@ -63,12 +63,12 @@ int main(void)
         // Toggle Leds
         if (led_state) {
 
-            onboard_led_sample_fetch();
+            //onboard_led_sample_fetch();
             gpio_pin_set_dt(&app_led, 1);
         
         } else {
 
-            onboard_led_channel_get();
+            //onboard_led_channel_get();
             gpio_pin_set_dt(&app_led, 0);
         }
 
