@@ -4,6 +4,3 @@ build
 # West files
 .west
 deps
-
-# Twister Outputs
-twister*
